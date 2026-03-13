@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leśna Szlachetność – Ekologiczne Mięso z Sarny</title>
+<title>Kocia Radość – Zabawki dla Kotów</title>
 
 <style>
 
@@ -15,56 +15,57 @@ font-family: "Georgia", serif;
 }
 
 body{
-background:#0f0f0f;
-color:#e8e8e8;
+background:#111;
+color:#eee;
 line-height:1.6;
 }
 
-header{
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url("https://images.unsplash.com/photo-1601758228041-f3b2795255f1");
-background-size:cover;
-background-position:center;
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-header h1{
-font-size:3.5rem;
-color:#d4af37;
-letter-spacing:3px;
-margin-bottom:20px;
-}
-
-header p{
-font-size:1.3rem;
-max-width:700px;
-}
-
 nav{
-position:absolute;
+position:fixed;
 top:0;
 width:100%;
-padding:20px;
+background:rgba(0,0,0,0.8);
 display:flex;
 justify-content:center;
 gap:40px;
-background:rgba(0,0,0,0.5);
+padding:15px;
+z-index:100;
 }
 
 nav a{
-color:#e8e8e8;
+color:#eee;
 text-decoration:none;
 font-size:1.1rem;
 transition:0.3s;
 }
 
 nav a:hover{
-color:#d4af37;
+color:#f4c542;
+}
+
+header{
+height:80vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
+url("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+header h1{
+font-size:3.5rem;
+color:#f4c542;
+margin-bottom:20px;
+}
+
+header p{
+max-width:700px;
+font-size:1.2rem;
 }
 
 section{
@@ -74,90 +75,81 @@ padding:80px 10%;
 .section-title{
 text-align:center;
 font-size:2.5rem;
-color:#d4af37;
+color:#f4c542;
 margin-bottom:50px;
-}
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.about img{
-width:100%;
-border-radius:10px;
 }
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 }
 
-.product-card{
-background:#1a1a1a;
-padding:25px;
+.product{
+background:#1b1b1b;
 border-radius:10px;
-transition:0.3s;
+overflow:hidden;
 border:1px solid #333;
+transition:0.3s;
 }
 
-.product-card:hover{
+.product:hover{
 transform:translateY(-5px);
-border-color:#d4af37;
+border-color:#f4c542;
 }
 
-.product-card h3{
-color:#d4af37;
+.product img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.product-content{
+padding:20px;
+}
+
+.product-content h3{
+color:#f4c542;
 margin-bottom:10px;
 }
 
 .price{
-font-size:1.3rem;
-margin-top:10px;
 font-weight:bold;
+margin-top:10px;
 }
 
-.contact{
-text-align:center;
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+height:250px;
+object-fit:cover;
 }
 
 footer{
 background:#000;
 text-align:center;
 padding:30px;
-margin-top:40px;
-font-size:0.9rem;
 color:#aaa;
+margin-top:40px;
 }
 
 button{
-background:#d4af37;
+background:#f4c542;
 border:none;
-padding:12px 28px;
-margin-top:20px;
-font-size:1rem;
+padding:10px 20px;
+margin-top:10px;
 cursor:pointer;
 border-radius:5px;
-transition:0.3s;
 }
 
 button:hover{
-background:#b8962e;
-}
-
-@media(max-width:900px){
-
-.about{
-grid-template-columns:1fr;
-}
-
-header h1{
-font-size:2.5rem;
-}
-
+background:#d4a62f;
 }
 
 </style>
@@ -167,82 +159,84 @@ font-size:2.5rem;
 
 <nav>
 <a href="#">Strona główna</a>
-<a href="#about">O nas</a>
 <a href="#products">Produkty</a>
+<a href="#gallery">Kotki</a>
 <a href="#contact">Kontakt</a>
 </nav>
 
 <header>
-<h1>Leśna Szlachetność</h1>
-<p>Luksusowe ekologiczne mięso z sarny pozyskiwane humanitarnie i z pełnym szacunkiem dla natury.</p>
-<button>Zobacz ofertę</button>
+<h1>Kocia Radość</h1>
+<p>Luksusowe zabawki dla kotów, które pobudzają instynkt łowiecki, zapewniają ruch i godziny świetnej zabawy.</p>
 </header>
 
-<section id="about">
-<h2 class="section-title">O naszej filozofii</h2>
-
-<div class="about">
-<img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d">
-
-<p>
-Nasza firma specjalizuje się w sprzedaży najwyższej jakości mięsa z sarny.
-Każdy produkt pochodzi z naturalnych terenów leśnych i jest pozyskiwany
-zgodnie z zasadami ekologii oraz humanitarnego traktowania zwierząt.
-
-Dbamy o zrównoważoną gospodarkę leśną oraz najwyższe standardy
-przetwarzania mięsa. Dzięki temu oferujemy produkt wyjątkowy,
-ceniony przez najlepsze restauracje oraz koneserów dziczyzny.
-</p>
-
-</div>
-</section>
-
 <section id="products">
-<h2 class="section-title">Nasze produkty</h2>
+
+<h2 class="section-title">Nasze zabawki</h2>
 
 <div class="products">
 
-<div class="product-card">
-<h3>Polędwica z sarny</h3>
-<p>Najdelikatniejsza część mięsa, idealna do dań premium.</p>
-<div class="price">420 zł / kg</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1601758064224-c3c9f6d4bba6">
+<div class="product-content">
+<h3>Myszka Premium</h3>
+<p>Miękka zabawka imitująca prawdziwą mysz – ulubieniec kotów.</p>
+<div class="price">39 zł</div>
+<button>Kup teraz</button>
+</div>
 </div>
 
-<div class="product-card">
-<h3>Comber z sarny</h3>
-<p>Szlachetny kawałek mięsa doskonały do pieczenia.</p>
-<div class="price">360 zł / kg</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd">
+<div class="product-content">
+<h3>Wędka dla kota</h3>
+<p>Zabawka z piórkami, która pobudza instynkt polowania.</p>
+<div class="price">49 zł</div>
+<button>Kup teraz</button>
+</div>
 </div>
 
-<div class="product-card">
-<h3>Stek z sarny</h3>
-<p>Wyselekcjonowane porcje dla restauracji i smakoszy.</p>
-<div class="price">390 zł / kg</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1595433562696-90eab58c4c0d">
+<div class="product-content">
+<h3>Tor z piłką</h3>
+<p>Interaktywna zabawka zapewniająca ruch i zabawę.</p>
+<div class="price">79 zł</div>
+<button>Kup teraz</button>
+</div>
 </div>
 
-<div class="product-card">
-<h3>Kiełbasa z dziczyzny</h3>
-<p>Rzemieślnicza kiełbasa przygotowana z naturalnych przypraw.</p>
-<div class="price">120 zł / kg</div>
 </div>
 
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Kotki korzystające z naszych zabawek</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4">
+<img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13">
+<img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803">
+<img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce">
+
 </div>
+
 </section>
 
 <section id="contact">
+
 <h2 class="section-title">Kontakt</h2>
 
-<div class="contact">
-<p>Email: kontakt@lesnaszlachetnosc.pl</p>
-<p>Telefon: +48 600 000 000</p>
-<p>Dostawy realizujemy na terenie całej Polski.</p>
-<button>Zamów</button>
-</div>
+<p style="text-align:center">
+Email: kontakt@kociaradosc.pl<br>
+Telefon: +48 600 000 000
+</p>
 
 </section>
 
 <footer>
-© 2026 Leśna Szlachetność – Ekologiczne mięso z sarny
+© 2026 Kocia Radość – Zabawki dla kotów
 </footer>
 
 </body>
